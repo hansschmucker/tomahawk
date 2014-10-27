@@ -21,6 +21,7 @@
 #include "ScriptResolver.h"
 
 #include "accounts/AccountConfigWidget.h"
+#include "utils/TomahawkUtils.h"
 #include "utils/TomahawkUtilsGui.h"
 #include "utils/Json.h"
 #include "utils/Logger.h"
@@ -45,7 +46,7 @@
 #endif
 
 ScriptResolver::ScriptResolver( const QString& exe )
-    : Tomahawk::ExternalResolverGui( exe )
+    : Tomahawk::ExternalResolver( exe )
     , m_num_restarts( 0 )
     , m_msgsize( 0 )
     , m_ready( false )

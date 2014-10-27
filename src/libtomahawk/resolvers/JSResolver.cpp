@@ -54,7 +54,7 @@
 #include <QWebFrame>
 
 JSResolver::JSResolver( const QString& accountId, const QString& scriptPath, const QStringList& additionalScriptPaths )
-    : Tomahawk::ExternalResolverGui( scriptPath )
+    : Tomahawk::ExternalResolver( scriptPath )
     , d_ptr( new JSResolverPrivate( this, accountId, scriptPath, additionalScriptPaths ) )
 {
     Q_D( JSResolver );
