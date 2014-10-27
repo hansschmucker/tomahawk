@@ -48,7 +48,6 @@ public:
 
 signals:
     void information( const QString& url, const QSharedPointer<QObject>& variant );
-    void done();
 
 protected:
     void exec() override;

@@ -37,7 +37,6 @@ public:
 
 signals:
     void tracks( const QList< Tomahawk::query_ptr >& );
-    void done();
 
 protected:
     void exec() override;

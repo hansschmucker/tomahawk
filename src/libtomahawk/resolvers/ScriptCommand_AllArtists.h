@@ -38,7 +38,6 @@ public:
 
 signals:
     void artists( const QList< Tomahawk::artist_ptr >& );
-    void done();
 
 protected:
     void exec() override;

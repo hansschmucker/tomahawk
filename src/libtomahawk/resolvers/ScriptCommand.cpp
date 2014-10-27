@@ -17,25 +17,10 @@
  *   along with Tomahawk. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef SCRIPTCOMMAND_H
-#define SCRIPTCOMMAND_H
+#include "ScriptCommand.h"
 
-#include <QObject>
 
-class ScriptCommand : public QObject
+ScriptCommand::ScriptCommand( QObject* parent )
+    : QObject( parent )
 {
-    Q_OBJECT
-public:
-    explicit ScriptCommand( QObject* parent = nullptr );
-    virtual ~ScriptCommand() {}
-
-signals:
-    void done();
-
-protected:
-    friend class ScriptCommandQueue;
-    virtual void exec() = 0;
-    virtual void reportFailure() = 0;
-};
-
-#endif // SCRIPTCOMMAND_H
+}
