@@ -39,11 +39,6 @@ namespace Tomahawk {
 
 class SpotifyParser;
 
-namespace InfoSystem
-{
-    class SpotifyInfoPlugin;
-}
-
 namespace Accounts {
 
 class SpotifyAccountConfig;
@@ -81,7 +76,7 @@ public:
     virtual void deauthenticate();
 
     virtual QWidget* aclWidget() { return 0; }
-    virtual Tomahawk::InfoSystem::InfoPluginPtr infoPlugin();
+    // virtual Tomahawk::InfoSystem::InfoPluginPtr infoPlugin() ;
     virtual SipPlugin* sipPlugin( bool ) { return 0; }
     virtual bool preventEnabling() const { return m_preventEnabling; }
 
@@ -153,7 +148,6 @@ private:
     QPointer<SpotifyAccountConfig> m_configWidget;
     QPointer<QWidget> m_aboutWidget;
     QPointer<ScriptResolver> m_spotifyResolver;
-    QPointer< InfoSystem::SpotifyInfoPlugin > m_infoPlugin;
 
     QMap<QString, QPair<QObject*, QString> > m_qidToSlotMap;
     QMap<QString, QVariant > m_qidToExtraData;
