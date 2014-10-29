@@ -208,9 +208,6 @@ list(APPEND libSources
     accounts/ConfigStorage.cpp
     accounts/LocalConfigStorage.cpp
 
-    accounts/spotify/SpotifyAccount.cpp
-    accounts/spotify/SpotifyAccountConfig.cpp
-
     audio/AudioEngine.cpp
     audio/AudioOutput.cpp
     audio/MediaStream.cpp
@@ -378,7 +375,6 @@ set( libUI ${libUI}
     playlist/QueueView.ui
     filemetadata/MetadataEditor.ui
     accounts/AccountFactoryWrapper.ui
-    accounts/spotify/SpotifyAccountConfig.ui
     accounts/lastfm/LastFmConfig.ui
 )
 
@@ -536,7 +532,6 @@ INSTALL( TARGETS tomahawklib
 file( GLOB rootHeaders "*.h" )
 file( GLOB accountsHeaders "accounts/*.h" )
 file( GLOB accountsLastfmHeaders "accounts/lastfm/*.h" )
-file( GLOB accountsSpotifyHeaders "accounts/spotify/*.h" )
 file( GLOB audioHeaders "audio/*.h" )
 file( GLOB collectionHeaders "collection/*.h" )
 file( GLOB contextHeaders "context/*.h" )
@@ -565,7 +560,6 @@ install( FILES ${CMAKE_CURRENT_BINARY_DIR}/config.h DESTINATION include/libtomah
 install( FILES ${rootHeaders} DESTINATION include/libtomahawk )
 install( FILES ${accountsHeaders} DESTINATION include/libtomahawk/accounts )
 install( FILES ${accountsLastfmHeaders} DESTINATION include/libtomahawk/accounts/lastfm )
-install( FILES ${accountsSpotifyHeaders} DESTINATION include/libtomahawk/accounts/spotify )
 install( FILES ${audioHeaders} DESTINATION include/libtomahawk/audio )
 install( FILES ${collectionHeaders} DESTINATION include/libtomahawk/collection )
 install( FILES ${contextHeaders} DESTINATION include/libtomahawk/context )
